@@ -1,0 +1,22 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Daily Learning Notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"haha~\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwucong/notes.git"
+  },
+  "author": "jwucong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwucong/notes/issues"
+  },
+  "homepage": "https://github.com/jwucong/notes#readme",
+  "dependencies": {
+    "gitbook-plugin-toggle-chapters": "0.0.3"
+  }
+}
