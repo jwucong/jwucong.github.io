@@ -1,2 +1,2 @@
-# notes
-Daily Learning Notes
+
+# Live Demos and Daily Notes

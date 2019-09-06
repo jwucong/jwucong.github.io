@@ -1,324 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <title>jwucong</title>
+  <style>
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Notes · Notes</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="jwucong">
-        
-        
-    
-    <link rel="stylesheet" href="gitbook/style.css">
-
-    
-            
-                
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-toggle-chapters/toggle.css">
-                
-            
-                
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
-
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
-
-    
-    <link rel="next" href="gitbook/" />
-    
-    
-
-    <style>
-    @media only screen and (max-width: 640px) {
-        .book-header .hidden-mobile {
-            display: none;
-        }
+    @keyframes loop {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.12);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
-    </style>
-    <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"jwucong","repo":"note","type":"star","size":"small","count":true}]};
-    </script>
 
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font: 500 14px/1.25 "Source Han Sans", "Arial";
+    }
+
+    html, body, .all-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .loading {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      background-color: #fff;
+      opacity: 1;
+      transition: opacity 1.2s;
+    }
+
+    .loading .progress {
+      position: absolute;
+      top: 49%;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 1px solid #000;
+      transform: scaleY(0.5);
+    }
+
+    .loading .value {
+      position: absolute;
+      bottom: 35px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .all-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .all-container:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0.15;
+      transition: opacity 4.8s;
+    }
+
+    .all-container:hover:after {
+      opacity: 1;
+    }
+
+    .all-container .pic {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background: url("./demo-bg.jpg") center center / cover;
+      animation: loop infinite linear 28s;
+    }
+
+    .demos, .notes {
+      position: relative;
+      z-index: 10;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .demos:hover .btn,
+    .notes:hover .btn {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      display: block;
+      box-sizing: border-box;
+      width: 200px;
+      margin-top: -24px;
+      padding: 0 50px;
+      height: 48px;
+      line-height: 48px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      color: #000;
+      transition: all 2.4s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .demos .btn {
+      left: calc((200% - 400px) / 3);
+    }
+
+    .notes .btn{
+      right: calc((200% - 400px) / 3);
+    }
+
+    @media screen and (max-width: 1023px) {
+      .all-container:after {
+        opacity: 0.35;
+      }
+      .btn {
+        border-color: #fff;
+        color: #fff;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .all-container {
+        display: block;
+      }
+      .demos, .notes {
+        width: 100%;
+        height: 50%;
+      }
+      .demos .btn,
+      .notes .btn {
+        margin-top: 0;
+        left: 50%;
+        margin-left: -100px;
+        /*border-radius: 4px;*/
+      }
+      .demos .btn {
+        top: auto;
+        bottom: 24px;
+      }
+      .notes .btn {
+        top: 24px;
+        bottom: auto;
+      }
+    }
+
+  </style>
+  <script src="loading.min.js"></script>
+</head>
+<body>
+<script>
+  var loading = new JwcLoading({
+    onEnd: function() {
+      this.fadeOut(2000, this.remove)
+    }
+  })
+  window.onload = function() {
+    loading.end()
+  }
+  loading.start()
+</script>
+<div class="all-container">
+  <div class="pic"></div>
+  <div class="item demos">
+    <a href="javascript:;" class="btn">Live Demos</a>
+  </div>
+  <div class="item notes">
+    <a href="javascript:;" class="btn">Daily Notes</a>
+  </div>
 </div>
-
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-    
-        
-        <li>
-            <a href="https://github.com/jwucong/notes" target="_blank" class="custom-link">github</a>
-        </li>
-    
-    
-
-    
-    <li class="divider"></li>
-    
-
-    
-        
-        
-    
-        <li class="chapter active" data-level="1.1" data-path="./">
-            
-                <a href="./">
-            
-                    
-                    Notes
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="gitbook/">
-            
-                <a href="gitbook/">
-            
-                    
-                    gitbook
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.2.1" data-path="gitbook/">
-            
-                <a href="gitbook/">
-            
-                    
-                    安装说明
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.2" data-path="gitbook/book.json.html">
-            
-                <a href="gitbook/book.json.html">
-            
-                    
-                    配置文件
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="vim/">
-            
-                <a href="vim/">
-            
-                    
-                    vim
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Notes</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="notes">notes</h1>
-<p>Daily Learning Notes</p>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
-            </div>
-
-            
-                
-                
-                <a href="gitbook/" class="navigation navigation-next navigation-unique" aria-label="Next page: gitbook">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Notes","level":"1.1","depth":1,"next":{"title":"gitbook","level":"1.2","depth":1,"path":"gitbook/README.md","ref":"gitbook/README.md","articles":[{"title":"安装说明","level":"1.2.1","depth":2,"path":"gitbook/README.md","ref":"gitbook/README.md","articles":[]},{"title":"配置文件","level":"1.2.2","depth":2,"path":"gitbook/book.json.md","ref":"gitbook/book.json.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","-sharing","github","github-buttons","sharing-plus","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/jwucong/notes"},"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"jwucong","repo":"note","type":"star","size":"small","count":true}]},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"jwucong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Notes","links":{"sidebar":{"github":"https://github.com/jwucong/notes"}},"gitbook":"3.2.3","description":""},"file":{"path":"README.md","mtime":"2019-01-22T08:20:40.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-24T01:56:47.507Z"},"basePath":".","book":{"language":""}});
-        });
-    </script>
-</div>
-
-        
-    <script src="gitbook/gitbook.js"></script>
-    <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</body>
 </html>
-
