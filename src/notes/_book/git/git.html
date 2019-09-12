@@ -1,0 +1,517 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Git · jwucong</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.1" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Git</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="git-&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x7B80;&#x5355;&#x8BF4;&#x660E;">git &#x5E38;&#x7528;&#x547D;&#x4EE4;&#x7B80;&#x5355;&#x8BF4;&#x660E;</h1>
+<h3 id="command-list">command list</h3>
+<ul>
+<li><a href="#git-clone">git clone</a></li>
+<li><a href="#git-config">git config</a></li>
+<li><a href="#git-pull">git pull</a></li>
+<li><a href="#git-status">git status</a></li>
+<li><a href="#git-add">git add</a></li>
+<li><a href="#git-commit">git commit</a></li>
+<li><a href="#git-push">git push</a></li>
+<li><a href="#git-tag">git tag</a></li>
+<li><a href="#git-branch">git branch</a></li>
+<li><a href="#git-checkout">git checkout</a></li>
+<li><a href="#git-merge">git merge</a></li>
+<li><a href="#git-log">git log</a></li>
+<li><a href="#git-cherry-pick">git cherry-pick</a></li>
+<li><a href="#git-reset">git reset</a></li>
+<li><a href="#git-revert">git revert</a></li>
+<li><a href="#git-stash">git stash</a></li>
+</ul>
+<h3 id="git-clone">git clone</h3>
+<blockquote>
+<p>&#x4ECE;git&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;&#x514B;&#x9686;&#x4EE3;&#x7801;&#x5230;&#x672C;&#x5730;  </p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git clone [url]<br>&#x514B;&#x9686;&#x5B8C;&#x6210;&#x540E;&#x5728;&#x672C;&#x5730;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;&quot;jwucong.github.io&quot;&#x7684;&#x6587;&#x4EF6;&#x5939;</p>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> git@github.com:jwucong/jwucong.github.io.git
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a></p>
+<h3 id="git-config">git config</h3>
+<blockquote>
+<p>&#x8BBE;&#x7F6E;/&#x67E5;&#x770B;git&#x914D;&#x7F6E;&#x4FE1;&#x606F;  </p>
+</blockquote>
+<p><strong>&#x67E5;&#x770B;&#x8BED;&#x6CD5;:</strong> git config [key]<br><strong>&#x8BBE;&#x7F6E;&#x8BED;&#x6CD5;:</strong> git config [key] [value]</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B;git&#x7528;&#x6237;&#x540D;</span>
+git config user.name
+
+<span class="hljs-comment"># &#x67E5;&#x770B;git&#x7528;&#x6237;&#x90AE;&#x7BB1;</span>
+git config user.email
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;git&#x7528;&#x6237;&#x540D;</span>
+git config user.name jwucong
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;git&#x7528;&#x6237;&#x90AE;&#x7BB1;</span>
+git config user.email jwucong@gmail.com
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a></p>
+<h3 id="git-pull">git pull</h3>
+<blockquote>
+<p>&#x5C06;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;&#x4EE3;&#x7801;&#x540C;&#x6B65;&#x5230;&#x672C;&#x5730;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git pull [origin] [branch]  </p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4F7F;&#x7528;git remote&#x83B7;&#x53D6;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;&#x7684;&#x540D;&#x5B57;</span>
+<span class="hljs-comment"># &#x4F7F;&#x7528;git branch -a &#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F;&#x5217;&#x8868;</span>
+<span class="hljs-comment"># &#x540C;&#x6B65;&#x8FDC;&#x7AEF;&#x540D;&#x4E3A;origin&#x7684;&#x4ED3;&#x5E93;&#x4E0B;&#x7684;dev&#x5206;&#x652F;</span>
+git pull origin dev
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a></p>
+<h3 id="git-status">git status</h3>
+<blockquote>
+<p>&#x67E5;&#x770B;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x72B6;&#x6001;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git status</p>
+<p>&#x5982;&#x679C;&#x6709;&#x6587;&#x4EF6;&#x88AB;&#x4FEE;&#x6539;&#x8FC7;&#x4F46;&#x662F;&#x6CA1;&#x6709;commit&#xFF0C;&#x5219;&#x663E;&#x793A;&#x53D1;&#x751F;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;&#xFF0C;
+&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x8FC7;&#xFF0C;&#x5219;&#x663E;&#x793A;&quot;nothing to commit, working tree clean&quot;</p>
+<pre><code class="lang-bash">git status
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a></p>
+<h3 id="git-add">git add</h3>
+<blockquote>
+<p>&#x5C06;&#x6587;&#x4EF6;&#x53D8;&#x52A8;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git add [files]</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4E00;&#x6B21;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</span>
+git add README.md
+
+<span class="hljs-comment"># &#x4E00;&#x6B21;&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x6587;&#x4EF6;</span>
+git add README.md index.html src/notes/git/git.md
+
+<span class="hljs-comment"># &#x4E00;&#x6B21;&#x6DFB;&#x52A0;&#x6240;&#x6709;&#x53D8;&#x52A8;&#x6587;&#x4EF6;</span>
+git add .
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a>  </p>
+<h3 id="git-commit">git commit</h3>
+<blockquote>
+<p>&#x628A;&#x4FEE;&#x6539;&#x8BB0;&#x5F55;&#x6DFB;&#x52A0;&#x5230;&#x7248;&#x672C;&#x5E93;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git commit -m [message]</p>
+<pre><code class="lang-bash">git commit -m <span class="hljs-string">&quot;&#x63D0;&#x4EA4;&#x539F;&#x56E0;&quot;</span>
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a>  </p>
+<h3 id="git-push">git push</h3>
+<blockquote>
+<p>&#x5C06;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x63A8;&#x9001;(&#x540C;&#x6B65;)&#x5230;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git push [origin] [branch]</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4F7F;&#x7528;git remote&#x83B7;&#x53D6;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;&#x540D;</span>
+<span class="hljs-comment"># &#x4F7F;&#x7528;git branch -a&#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F;&#x5217;&#x8868;</span>
+git push origin dev
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a>  </p>
+<h3 id="git-tag">git tag</h3>
+<blockquote>
+<p>&#x7ED9;&#x67D0;&#x4E2A;&#x7248;&#x672C;&#x6253;&#x6807;&#x7B7E;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git tag [tagName]</p>
+<p>&#x5F53;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x9700;&#x8981;&#x53D1;&#x5E03;&#x5230;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x65F6;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x7ED9;&#x6B64;&#x6B21;&#x7248;&#x672C;&#x6253;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#xFF0C;&#x6807;&#x7B7E;&#x540D;&#x53EF;&#x53D6;&#x7248;&#x672C;&#x53F7;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># tagName&#x4E3A;v1.0.0</span>
+git tag v1.0.0
+
+<span class="hljs-comment"># &#x628A;&#x8BE5;&#x6807;&#x7B7E;&#x7248;&#x672C;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;</span>
+git push origin v1.0.0
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a> </p>
+<h3 id="git-branch">git branch</h3>
+<blockquote>
+<p>&#x521B;&#x5EFA;&#x3001;&#x67E5;&#x770B;&#x3001;&#x91CD;&#x547D;&#x540D;&#x3001;&#x5220;&#x9664;&#x5206;&#x652F;</p>
+</blockquote>
+<p><strong>&#x521B;&#x5EFA;&#x8BED;&#x6CD5;:</strong> git branch [branchName]<br><strong>&#x67E5;&#x770B;&#x8BED;&#x6CD5;:</strong> git branch<br><strong>&#x91CD;&#x547D;&#x540D;&#x8BED;&#x6CD5;:</strong> git branch -m [oldBranchName] [newBranchName]<br><strong>&#x5220;&#x9664;&#x8BED;&#x6CD5;:</strong> git branch -d [branchName]</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x65B0;&#x5EFA;test&#x5206;&#x652F;</span>
+git branch <span class="hljs-built_in">test</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x672C;&#x5730;&#x5206;&#x652F;&#x5217;&#x8868;</span>
+git branch
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F;&#x5217;&#x8868;</span>
+git branch <span class="hljs-_">-a</span>
+
+<span class="hljs-comment"># &#x91CD;&#x547D;&#x540D;&#x5206;&#x652F;</span>
+git branch -m <span class="hljs-built_in">test</span> <span class="hljs-built_in">test</span>1
+
+<span class="hljs-comment"># &#x5220;&#x9664;&#x5206;&#x652F;</span>
+git branch <span class="hljs-_">-d</span> <span class="hljs-built_in">test</span>1
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a> </p>
+<h3 id="git-checkout">git checkout</h3>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x529F;&#x80FD;&#x8F83;&#x4E3A;&#x590D;&#x6742;&#xFF0C;&#x6B64;&#x5904;&#x4EC5;&#x7528;&#x4E8E;&#x5207;&#x6362;&#x5206;&#x652F;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git checkout [branch]  </p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5207;&#x6362;&#x5230;dev&#x5206;&#x652F;</span>
+git checkout dev
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a>   </p>
+<h3 id="git-merge">git merge</h3>
+<blockquote>
+<p>&#x5408;&#x5E76;&#x5206;&#x652F;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git merge [branch]  </p>
+<p>&#x5408;&#x5E76;&#x5206;&#x652F;&#x65F6;&#xFF0C;git&#x4F1A;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x5BF9;&#x6BD4;&#x81EA;&#x52A8;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x51B2;&#x7A81;&#xFF0C;&#x5982;&#x679C;git&#x81EA;&#x52A8;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x51B2;&#x7A81;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5904;&#x7406;&#x51B2;&#x7A81;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5207;&#x6362;&#x5230;test&#x5206;&#x652F;</span>
+git checkout <span class="hljs-built_in">test</span>
+
+<span class="hljs-comment"># &#x628A;dev&#x5206;&#x652F;&#x5408;&#x5E76;&#x5230;test&#x5206;&#x652F;</span>
+git merge dev
+
+<span class="hljs-comment"># &#x628A;dev&#x5206;&#x652F;&#x5408;&#x5E76;&#x5230;test&#x5206;&#x652F;&#x5E76;&#x8BB0;&#x5F55;dev&#x7684;commit&#x8282;&#x70B9;</span>
+git merge dev --no-off
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;git status&#x67E5;&#x770B;&#x51B2;&#x7A81;&#x6587;&#x4EF6;</span>
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a> </p>
+<h3 id="git-log">git log</h3>
+<blockquote>
+<p>&#x67E5;&#x770B;commit&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git log [file]  </p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B;src/notes/git/git.md&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;commit&#x8BB0;&#x5F55;</span>
+git <span class="hljs-built_in">log</span> src/notes/git/git.md
+</code></pre>
+<p>   <a href="#command-list">&#x2191; BackToCommandList</a></p>
+<h3 id="git-cherry-pick">git cherry-pick</h3>
+<blockquote>
+<p>&#x4ECE;&#x67D0;&#x4E2A;&#x5206;&#x652F;&#x4E0A;&#x6311;&#x9009;&#x67D0;&#x4E9B;commit&#x5408;&#x5E76;&#x5230;&#x67D0;&#x4E2A;&#x5206;&#x652F;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git cherry-pick [commitId]  </p>
+<p>&#x6B64;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x628A;&#x67D0;&#x6B21;commit&#x7684;&#x4FEE;&#x6539;&#x5355;&#x72EC;&#x6311;&#x51FA;&#x6765;&#x5408;&#x5E76;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#xFF1B;
+&#x5982;&#x5F00;&#x53D1;&#x5206;&#x652F;&#x6709;&#x5F88;&#x591A;&#x6B21;commit&#xFF0C;&#x4F46;&#x662F;master&#x5206;&#x652F;&#x9700;&#x8981;&#x7D27;&#x6025;&#x4E0A;&#x7EBF;dev&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x7528;&#x6B64;&#x547D;&#x4EE4;&#x5F88;&#x6709;&#x6548;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5148;&#x5207;&#x6362;&#x5230;&#x9700;&#x8981;&#x5408;&#x5E76;&#x5230;&#x7684;&#x5206;&#x652F;</span>
+git checkout master
+
+<span class="hljs-comment"># &#x6311;&#x51FA;dev&#x4E2D;&#x65B0;&#x5F00;&#x53D1;&#x7684;&#x529F;&#x80FD;&#x5408;&#x5E76;&#x5230;master</span>
+<span class="hljs-comment"># &#x4F7F;&#x7528;git log&#x67E5;&#x770B;&#x9700;&#x8981;&#x5408;&#x5E76;&#x7684;&#x90A3;&#x6B21;commit&#x7684;commitId</span>
+<span class="hljs-comment"># pick&#x524D;&#x9700;&#x8981;pull&#x62B1;&#x6301;&#x672C;&#x5730;&#x5206;&#x652F;&#x662F;&#x6700;&#x65B0;&#x7684;&#x4EE3;&#x7801;</span>
+git cherry-pick 4a289b2
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a></p>
+<h3 id="git-reset">git reset</h3>
+<blockquote>
+<p>&#x7248;&#x672C;&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E2A;commit&#x8282;&#x70B9;&#xFF0C;&#x4F1A;&#x4F7F;&#x5F97;&#x7248;&#x672C;&#x8BB0;&#x5F55;&#x8282;&#x70B9;&#x548C;&#x5185;&#x5BB9;&#x540C;&#x65F6;&#x56DE;&#x9000;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git reset [--mode] [commitId]</p>
+<p><strong>mode:</strong> &#x9ED8;&#x8BA4;&#x4E3A;--mixed</p>
+<ol>
+<li>--soft: &#x4FDD;&#x7559;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x4FEE;&#x6539;&#x5E76;&#x64A4;&#x9500;&#x6682;&#x5B58;&#x533A;</li>
+<li>--mixed: &#x4FDD;&#x7559;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x4FEE;&#x6539;&#x5E76;&#x4FDD;&#x7559;&#x6682;&#x5B58;&#x533A;</li>
+<li>--hard: &#x5220;&#x9664;&#x6240;&#x6709;&#x4FEE;&#x6539;&#xFF0C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5E72;&#x51C0;&#x7684;&#x5DE5;&#x4F5C;&#x533A;</li>
+<li>--merge: &#x5C1D;&#x8BD5;&#x81EA;&#x52A8;&#x5408;&#x5E76;&#x4FEE;&#x6539;</li>
+</ol>
+<p><strong>reset</strong>&#x548C;<strong>revert</strong>&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li>reset&#x4F1A;&#x4F7F;&#x5F97;&#x7248;&#x672C;&#x8BB0;&#x5F55;&#x8282;&#x70B9;&#x548C;&#x5185;&#x5BB9;&#x540C;&#x65F6;&#x56DE;&#x9000;&#xFF0C;commit&#x8BB0;&#x5F55;&#x8282;&#x70B9;&#x662F;&#x540E;&#x9000;&#x7684;&#xFF0C;
+&#x9700;&#x8981;-f&#x5F3A;&#x5236;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7AEF;&#x516C;&#x5171;&#x5206;&#x652F;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x672C;&#x5730;&#x5206;&#x652F;&#x7684;&#x56DE;&#x9000;  </li>
+<li>revert&#x4F1A;&#x4F7F;&#x5F97;&#x7248;&#x672C;&#x8BB0;&#x5F55;&#x8282;&#x70B9;&#x524D;&#x8FDB;&#xFF0C;&#x7248;&#x672C;&#x5185;&#x5BB9;&#x56DE;&#x9000;&#xFF0C;commit&#x8BB0;&#x5F55;&#x8282;&#x70B9;&#x662F;&#x524D;&#x8FDB;&#x7684;&#xFF0C;
+&#x4E0D;&#x9700;&#x8981;-f&#x5F3A;&#x5236;&#x63A8;&#x9001;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x8FDC;&#x7AEF;&#x5206;&#x652F;&#x7684;&#x56DE;&#x9000;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5207;&#x6362;&#x5230;dev&#x5206;&#x652F;</span>
+git checkout dev
+
+<span class="hljs-comment"># &#x56DE;&#x9000;&#x5230;commitId&#x4E3A;9bf9446&#x7684;&#x8282;&#x70B9;</span>
+git reset --soft 9bf9446
+
+<span class="hljs-comment"># &#x9700;&#x8981;&#x91CD;&#x65B0;&#x52A0;&#x5165;&#x6682;&#x5B58;&#x533A;</span>
+git add .
+git commit -m <span class="hljs-string">&quot;&#x65B0;&#x63D0;&#x4EA4;&#x5907;&#x6CE8;&quot;</span>
+
+<span class="hljs-comment"># &#x5982;&#x679C;&#x8FDC;&#x7AEF;&#x5206;&#x652F;&#x6709;&#x8D85;&#x524D;&#x5206;&#x652F;&#xFF0C;&#x5219;&#x9700;&#x8981;-f&#x5F3A;&#x5236;&#x63A8;&#x9001;</span>
+git push origin dev <span class="hljs-_">-f</span>
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a></p>
+<h3 id="git-revert">git revert</h3>
+<blockquote>
+<p>&#x7248;&#x672C;&#x56DE;&#x9000;&#x5230;&#x67D0;&#x4E2A;commit&#x8282;&#x70B9;&#xFF0C;&#x4F1A;&#x4F7F;&#x5F97;&#x7248;&#x672C;&#x8BB0;&#x5F55;&#x8282;&#x70B9;&#x524D;&#x8FDB;&#xFF0C;&#x7248;&#x672C;&#x5185;&#x5BB9;&#x56DE;&#x9000;</p>
+</blockquote>
+<p><strong>&#x8BED;&#x6CD5;:</strong> git revert [commitId]</p>
+<p><strong>commitId tips:</strong></p>
+<ol>
+<li>&#x6B64;&#x5904;&#x7684;commitId&#x662F;&#x4F60;&#x9700;&#x8981;&#x56DE;&#x9000;&#x5230;&#x7684;&#x90A3;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x66F4;&#x65B0;&#x4E00;&#x6B21;&#x8282;&#x70B9;&#x7684;commitId&#xFF0C;&#x5982;&#x8282;&#x70B9;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x4E3A;&#xFF1A;<br>A -&gt; B -&gt; C -&gt; D -&gt; E<br>&#x6B64;&#x65F6;&#x6700;&#x65B0;&#x7684;&#x8282;&#x70B9;&#x4E3A;E&#xFF0C;&#x4F60;&#x8981;&#x4ECE;E&#x56DE;&#x9000;&#x5230;B&#xFF0C;&#x90A3;&#x4E48;commitId&#x5E94;&#x8BE5;&#x7528;C&#x7684;commitId</li>
+<li>git revert&#x6307;&#x4EE4;&#x4F1A;&#x4F7F;&#x5F97;git&#x81EA;&#x52A8;&#x8FDB;&#x5165;vim&#x6A21;&#x5F0F;&#xFF0C;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x6B64;&#x6B21;revert&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x7684;message&#xFF0C;
+&#x6309;i&#x8FDB;&#x5165;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF0C;&#x6309;:wq&#x4FDD;&#x5B58;&#x5E76;&#x9000;&#x51FA;</li>
+</ol>
+<p><strong>reset</strong>&#x548C;<strong>revert</strong>&#x7684;&#x533A;&#x522B;&#xFF1A;  </p>
+<ul>
+<li>git revert&#x4F1A;&#x6DFB;&#x52A0;&#x4E00;&#x6B21;&#x65B0;&#x7684;&#x63D0;&#x4EA4;&#x6765;&#x56DE;&#x9000;&#x5230;&#x9700;&#x8981;&#x56DE;&#x9000;&#x7684;commit&#x8282;&#x70B9;&#xFF0C;
+&#x6240;&#x4EE5;&#x6700;&#x65B0;&#x8282;&#x70B9;&#x548C;&#x56DE;&#x9000;&#x5230;&#x7684;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#x7684;&#x8BB0;&#x5F55;&#x90FD;&#x8FD8;&#x5728;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#xFF0C;
+&#x7C7B;&#x4F3C;&#x4E8E;&#x4ECA;&#x5E74;&#x662F;2019&#x5E74;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E3E;&#x529E;FIBA&#x7BEE;&#x7403;&#x4E16;&#x754C;&#x676F;&#x6BD4;&#x8D5B;&#xFF0C;
+git revert&#x4E4B;&#x540E;&#xFF0C;&#x65F6;&#x95F4;&#x53D8;&#x6210;&#x4E86;2020&#x5E74;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5374;&#x5728;&#x4E3E;&#x529E;2008&#x5E74;&#x5965;&#x8FD0;&#x4F1A;&#xFF0C;
+&#x65F6;&#x95F4;&#x8282;&#x70B9;&#x5F80;&#x524D;&#x63A8;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x6D3B;&#x5728;&#x8FC7;&#x53BB;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x79CD;&#x610F;&#x601D;&#xFF0C;<strong>&#x5E38;&#x7528;&#x4E8E;&#x56DE;&#x9000;&#x8FDC;&#x7AEF;&#x5206;&#x652F;</strong></li>
+<li>git reset&#x662F;&#x5982;&#x679C;&#x8981;&#x56DE;&#x9000;&#x5230;2008&#x5E74;&#xFF0C;&#x90A3;&#x65F6;&#x95F4;&#x5C31;&#x5012;&#x6D41;&#x56DE;&#x5230;2008&#x5E74;&#xFF0C;&#x6211;&#x4EEC;&#x540C;&#x6837;&#x4E3E;&#x529E;&#x5965;&#x8FD0;&#x4F1A;&#xFF0C;
+2008&#x5E74;&#x5230;2019&#x5E74;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x5728;&#x4F60;&#x8111;&#x6D77;&#x91CC;&#x88AB;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x4F60;&#x6CA1;&#x6709;&#x5173;&#x4E8E;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x7684;&#x8BB0;&#x5FC6;&#x4E86;&#xFF0C;&#x771F;&#x6B63;&#x7684;&#x56DE;&#x5230;2008&#x5E74;&#x4E86;&#xFF0C;<strong>&#x5E38;&#x7528;&#x4E8E;&#x56DE;&#x9000;&#x672C;&#x5730;&#x5206;&#x652F;</strong></li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#x540E;&#x81EA;&#x52A8;&#x8FDB;&#x5165;vim&#x6A21;&#x5F0F;</span>
+git revert 9bf9446
+
+<span class="hljs-comment"># &#x4E0A;&#x9762;&#x4F7F;&#x7528;vim&#x6A21;&#x5F0F;&#x7F16;&#x8F91;&#x5B8C;&#x63D0;&#x4EA4;&#x5907;&#x6CE8;&#x4E4B;&#x540E;&#x63A8;&#x9001;</span>
+git push origin master
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a></p>
+<h3 id="git-stash">git stash</h3>
+<blockquote>
+<p>git&#x672C;&#x5730;&#x8BB0;&#x5F55;&#x6808;&#xFF0C;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x672C;&#x5730;&#x4FEE;&#x6539;</p>
+</blockquote>
+<p>&#x4F8B;&#x5982;&#x4F60;&#x6B63;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x7A81;&#x7136;&#x53D1;&#x73B0;&#x5FD8;&#x8BB0;&#x5207;&#x6362;&#x5206;&#x652F;&#x4E86;&#xFF0C;&#x4F60;&#x76F4;&#x63A5;&#x5728;master&#x4E0A;&#x5F00;&#x53D1;&#x4E86;&#xFF0C;
+&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x5148;&#x628A;&#x6B64;&#x6B21;&#x4FEE;&#x6539;&#x4FDD;&#x5B58;&#x5728;stash&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x5207;&#x6362;&#x5230;dev&#x5206;&#x652F;&#xFF0C;&#x518D;&#x4ECE;stash&#x4E2D;&#x6062;&#x590D;&#x4FEE;&#x6539;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5148;&#x628A;&#x672C;&#x5730;&#x4FEE;&#x6539;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;</span>
+git add .
+
+<span class="hljs-comment"># &#x628A;&#x6682;&#x5B58;&#x533A;&#x4E2D;&#x7684;&#x4FEE;&#x6539;&#x63A8;&#x5165;&#x6808;&#x4E2D;</span>
+git stash push -m <span class="hljs-string">&quot;message&quot;</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x672C;&#x5730;stash&#x6808;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x5217;&#x8868;</span>
+git stash list
+
+<span class="hljs-comment"># &#x5C06;&#x672C;&#x5730;stash&#x6808;&#x4E2D;&#x7684;&#x67D0;&#x6761;&#x8BB0;&#x5F55;&#x5E94;&#x7528;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;</span>
+git stash apply stash@{1}
+
+<span class="hljs-comment"># &#x5E94;&#x7528;&#x6808;&#x9876;&#x8BB0;&#x5F55;&#x5E76;&#x5220;&#x9664;</span>
+git stash pop
+
+<span class="hljs-comment"># &#x5220;&#x9664;&#x6808;&#x4E2D;&#x7684;&#x67D0;&#x6761;&#x8BB0;&#x5F55;</span>
+git stash drop stash@{1}
+
+<span class="hljs-comment"># &#x6E05;&#x9664;&#x6808;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8BB0;&#x5F55;</span>
+git stash clear
+</code></pre>
+<p><a href="#command-list">&#x2191; BackToCommandList</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 目录">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Git","level":"1.1.1","depth":2,"previous":{"title":"目录","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"Git","level":"1.1.1","depth":2,"path":"git/git.md","ref":"git/git.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"jwucong","gitbook":"*"},"file":{"path":"git/git.md","mtime":"2019-09-12T07:45:14.266Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-12T07:55:53.045Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
