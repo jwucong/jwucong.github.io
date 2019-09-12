@@ -1,3 +1,4 @@
 # 目录
 
-   [Git](git/git.md)
+1. [Git](git/git.md)
+2. [Vim](vim/vim.md)
