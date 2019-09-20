@@ -183,20 +183,20 @@
     }
 
   </style>
-  <script src="loading.min.js"></script>
+  <script src="./jwcProgress.js"></script>
+  <script>
+    var progress = new JwcProgress({
+      onEnd: function () {
+        this.fadeOut(this.destroy);
+      }
+    })
+    progress.start();
+    window.onload = function () {
+      progress.end();
+    }
+  </script>
 </head>
 <body>
-<script>
-  var loading = new JwcLoading({
-    onEnd: function() {
-      this.fadeOut(2000, this.remove)
-    }
-  })
-  window.onload = function() {
-    loading.end()
-  }
-  loading.start()
-</script>
 <div class="all-container">
   <div class="pic"></div>
   <div class="item demos">
